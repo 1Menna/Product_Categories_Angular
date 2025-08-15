@@ -3,7 +3,19 @@
   max-width: 600px;    /* limit on big screens */
   min-width: 200px;    /* limit on small screens */
 }
+/* Smaller screens: make it narrower */
+@media (max-width: 576px) {
+  .search-box {
+    width: 80%;
+  }
+}
 
+/* Extra small screens (like old phones) */
+@media (max-width: 400px) {
+  .search-box {
+    width: 70%;
+  }
+}
  .h_w {
   height: 250px;      /* fixed height */
           /* make sure it fills width */
