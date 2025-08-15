@@ -4,7 +4,6 @@ import { Appliances } from '../appliances/appliances';
 import { Beauty } from '../beauty/beauty';
 import { Games } from '../games/games';
 import { Contact } from '../contact/contact';
-import { Home } from '../home/home';
 import { Fashion } from '../fashion/fashion';
 
 export const routes: Routes = [
@@ -14,6 +13,5 @@ export const routes: Routes = [
   { path: "games", component: Games, title: "games" },
   { path: "fashion", component: Fashion, title: "fashion" },
   { path: "contact", component: Contact, title: "contact" },
-  { path: "home", component: Home, title: "home" },
-  { path: "/", redirectTo: "electronics", pathMatch: "full" }
+  { path: "", redirectTo: "electronics", pathMatch: "full" }
 ];

@@ -5,12 +5,11 @@ import { Beauty } from '../beauty/beauty';
 import { Games } from '../games/games';
 import { Appliances } from '../appliances/appliances';
 import { Electronics } from '../electronics/electronics';
-import { Home } from '../home/home';
 import { Contact } from '../contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar,Beauty,Games,Appliances,Electronics,Home,Contact],
+  imports: [RouterOutlet, Navbar,Beauty,Games,Appliances,Electronics,Contact],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
