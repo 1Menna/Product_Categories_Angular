@@ -3,7 +3,7 @@ Product Categories (Angular)
 A simple Angular application that displays product categories such as Fashion, Electronics, Games, Beauty, and Appliances.
 The app demonstrates Angular routing, TypeScript, and basic component-based architecture.
 
-📌 Features
+📌#Features
 
 Category Listing – Shows multiple product categories with clean UI.
 
@@ -15,7 +15,7 @@ Reusable Components – Modular and maintainable component structure.
 
 Responsive Design – Works well on desktop and mobile.
 
-🛠️ Technologies Used
+🛠️#Technologies Used
 
 Angular – Frontend framework.
 
