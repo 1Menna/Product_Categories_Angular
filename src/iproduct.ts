@@ -1,6 +1,7 @@
 export interface Iproduct {
     id:number,
-    titile:string,
+    title:string,
     price:number,
     category:string
+    img:string
 }
