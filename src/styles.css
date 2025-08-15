@@ -1,21 +1,14 @@
 .search-box {
-  width: 120%;         /* bigger than container */
-  max-width: 600px;    /* limit on big screens */
-  min-width: 200px;    /* limit on small screens */
+  width: 100%;
+  max-width: 600px;
 }
-/* Smaller screens: make it narrower */
-@media (max-width: 576px) {
+
+@media (max-width: 992px) {
   .search-box {
-    width: 80%;
+    width: 90%;
   }
 }
 
-/* Extra small screens (like old phones) */
-@media (max-width: 400px) {
-  .search-box {
-    width: 70%;
-  }
-}
  .h_w {
   height: 250px;      /* fixed height */
           /* make sure it fills width */
