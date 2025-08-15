@@ -15,5 +15,5 @@ export const routes: Routes = [
   { path: "fashion", component: Fashion, title: "fashion" },
   { path: "contact", component: Contact, title: "contact" },
   { path: "home", component: Home, title: "home" },
-  { path: "", redirectTo: "home", pathMatch: "full" }
+  { path: "", redirectTo: "electronics", pathMatch: "full" }
 ];
