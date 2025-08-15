@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+.search-box {
+  width: 120%;         /* bigger than container */
+  max-width: 600px;    /* limit on big screens */
+  min-width: 200px;    /* limit on small screens */
+}
