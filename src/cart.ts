@@ -15,4 +15,10 @@ export class Cart {
     this.added_products.push(obj);
     this.count+=1;
    }
+
+   delete(x:string){
+     this.added_products = this.added_products.filter(p => p.title !== x )
+     console.log(this.added_products)
+     this.count-=1;
+   }
 }

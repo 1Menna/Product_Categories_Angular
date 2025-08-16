@@ -16,4 +16,8 @@ export class ShoppingCart {
     constructor(private _:Cart){
       this.p = this._.added_products;
     }
+
+    del(x:string):void{
+        this._.delete(x);
+    }
 }
