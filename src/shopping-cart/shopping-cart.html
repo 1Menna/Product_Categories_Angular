@@ -1,6 +1,6 @@
 <div class="container mt-4">
   <div class="row">
-    @for(product of products; track product.id)
+    @for(product of p; track product.id)
     {    
     <div class="col-12 col-md-6 col-lg-4 mb-4 ">
       <div class="card" style="width: 21rem;">
@@ -9,13 +9,17 @@
           <h5 class="card-title">{{product.title}}</h5>
           <p class="card-text">{{product.price}} EGP</p>
           <div class="d-flex justify-content-between">
-                <a   class="btn btn-success" [routerLink]="['/electronics',product.id]">View Detailes</a>
-                <a    class="btn btn-warning" (click)="add(product.id)">Add to cart</a>
+                <a class="btn btn-success" [routerLink]="['/games',product.id]">View Detailes</a>
+                <a href="#" class="btn btn-warning">Add to cart</a>
           </div>
         </div>
       </div>
     </div>
-   }  
+   }  @empty {
+    <h1 class="text-center"> Cart Is Empty 😊</h1>
+   }
   </div>
 </div>
+
+
 

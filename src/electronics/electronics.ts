@@ -1,6 +1,7 @@
 import { RouterLink } from '@angular/router';
 import { Iproduct } from './../iproduct';
 import { Component } from '@angular/core';
+import { Cart } from '../cart';
 
 export const electronics_products:Iproduct[]=[
     {id:1,title:"ASUS Vivobook S 14 Flip, AMD Ryzen 7 7730U",price:15000,category:"Laptop",img:"/electronic/ASUS Vivobook S 14 Flip, AMD Ryzen 7 7730U.jpg"},
@@ -19,4 +20,11 @@ export const electronics_products:Iproduct[]=[
 })
 export class Electronics {
     products = electronics_products;
+
+    constructor(private _Cart:Cart){
+        
+    }
+    add(id:number):void{
+      this._Cart.add_cart(electronics_products[id-1]);
+    }
 }

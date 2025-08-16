@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Iproduct } from '../iproduct';
 import { RouterLink } from '@angular/router';
+import { Cart } from '../cart';
 
 export const beauty_products:Iproduct[]=[
       {id:1,title:"Everyday Essentials Multi Use Brush Set Multicolour",price:120,category:"MakeUp",img:"/beauty/Everyday Essentials Multi Use Brush Set Multicolour.png"},
@@ -19,4 +20,11 @@ export const beauty_products:Iproduct[]=[
 })
 export class Beauty {
     products = beauty_products;
+
+    constructor(private _Cart:Cart){
+        
+    }
+    add(id:number):void{
+      this._Cart.add_cart(beauty_products[id-1]);
+    }
 }

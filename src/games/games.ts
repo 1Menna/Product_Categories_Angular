@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Iproduct } from '../iproduct';
 import { RouterLink } from '@angular/router';
+import { Cart } from '../cart';
 
 export const games_products:Iproduct[]=[
       {id:1,title:"Nilco Twist And Turn Cylinder Pack",price:500,category:"games",img:"/games/Nilco Twist And Turn Cylinder Pack.png"},
@@ -19,4 +20,11 @@ export const games_products:Iproduct[]=[
 })
 export class Games {
    products = games_products;
+   
+   constructor(private _Cart:Cart){
+
+   }
+   add(id:number):void{
+      this._Cart.add_cart(games_products[id-1]);
+   }
 }

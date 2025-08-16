@@ -14,6 +14,13 @@
       <li class="nav-item">
         <a class="nav-link text-light cursor-ptr" routerLink="contact" routerLinkActive="bg-warning text-dark">Contact Us</a>
       </li>
+      <li class="nav-item">
+        <a routerLink="cart" routerLinkActive="bg-warning text-dark" class="nav-link">
+          <i class="fa-solid fa-cart-shopping text-light ms-3 mt-1 cursor-ptr"></i>
+          <span class="text-light">{{_Cart.count}}</span>
+        </a>
+      </li>
+
     </ul>
 
   </div>

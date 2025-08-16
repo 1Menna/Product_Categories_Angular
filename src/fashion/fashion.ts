@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Iproduct } from '../iproduct';
 import { RouterLink } from '@angular/router';
+import { Cart } from '../cart';
 
 export const fashion_products:Iproduct[]=[
   {id:1,title:"Mintra Unisex Jet Backpack With Laptop Pocket",price:400,category:"bags",img:"/fashion/Mintra Unisex Jet Backpack With Laptop Pocket_400.jpg"},
@@ -20,4 +21,11 @@ export const fashion_products:Iproduct[]=[
 })
 export class Fashion {
     products=fashion_products;
+
+    constructor(private _Cart:Cart){
+    
+    }
+    add(id:number):void{
+      this._Cart.add_cart(fashion_products[id-1]);
+    }
 }

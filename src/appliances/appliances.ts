@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Iproduct } from '../iproduct';
 import { RouterLink } from '@angular/router';
+import { Cart } from '../cart';
 
 export const appliances_products:Iproduct[]=[
         {id:1,title:"Foldable Laptop Table With Cup Holder Combination Material Multicolou",price:230,category:"Home & appliances",img:"/appliances/Foldable Laptop Table With Cup Holder Combination Material Multicolou.png"},
@@ -20,4 +21,11 @@ export const appliances_products:Iproduct[]=[
 })
 export class Appliances {
      products = appliances_products ;
+
+    constructor(private _Cart:Cart){
+         
+    }
+    add(id:number):void{
+        this._Cart.add_cart(appliances_products[id-1]);
+    }
 }
