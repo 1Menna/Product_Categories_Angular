@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Iproduct } from '../iproduct';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-beauty',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './beauty.html',
   styleUrl: './beauty.css'
 })

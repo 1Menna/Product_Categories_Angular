@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Iproduct } from '../iproduct';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-fashion',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './fashion.html',
   styleUrl: './fashion.css'
 })
@@ -15,6 +16,6 @@ export class Fashion {
             {id:4,title:"Mintra Unsiex Essential Bag",price:480,category:"bags",img:"/fashion/Mintra Unsiex Essential Bag_480.jpg"},
             {id:5,title:"Mintra Unisex School Backpack 2 Pocket, Blue, 15 L",price:200,category:"bags",img:"/fashion/Mintra Unisex School Backpack 2 Pocket, Blue, 15 L_200.jpg"},
             {id:6,title:"Mintra Unisex School Backpack 2 Pocket Large",price:180,category:"bags",img:"/fashion/Mintra Unisex School Backpack 2 Pocket Large_190.jpg"},
-            {id:6,title:"Mintra Unsiex Duffle Sport Bag, Grey",price:410,category:"bags",img:"/fashion/Mintra Unsiex Duffle Sport Bag, Grey_410.jpg"},
+            {id:7,title:"Mintra Unsiex Duffle Sport Bag, Grey",price:410,category:"bags",img:"/fashion/Mintra Unsiex Duffle Sport Bag, Grey_410.jpg"},
           ]
 }
