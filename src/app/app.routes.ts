@@ -14,11 +14,7 @@ export const routes: Routes = [
   { path: "games", component: Games, title: "games" },
   { path: "fashion", component: Fashion, title: "fashion" },
   // ===========================================================
-  { path: "electronics/:p_id", component: ProductDetails, title: "electronics" },
-  { path: "appliances/:p_id", component: ProductDetails, title: "appliances" },
-  { path: "beauty/:p_id", component: ProductDetails, title: "beauty" },
-  { path: "games/:p_id", component: ProductDetails, title: "games" },
-  { path: "fashion/:p_id", component: ProductDetails, title: "fashion" },
+  { path: ":category/:p_id", component: ProductDetails },
   // ===========================================================
   { path: "contact", component: Contact, title: "contact" },
   { path: "", redirectTo: "electronics", pathMatch: "full" }
