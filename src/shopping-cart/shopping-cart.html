@@ -1,6 +1,6 @@
 <div class="container mt-4">
   <div class="row">
-    @for(product of p; track product.id)
+    @for(product of _.added_products; track product.id)
     {    
     <div class="col-12 col-md-6 col-lg-4 mb-4 ">
       <div class="card" style="width: 21rem;">
@@ -12,10 +12,10 @@
                 <a class="btn btn-success" [routerLink]="['/games',product.id]">View Detailes</a>
                 <a class="btn btn-danger" (click)="del(product.title)">Delete</a>
           </div>
-        </div>
       </div>
     </div>
-   }  @empty {
+    </div>
+  }@empty {
     <h1 class="text-center"> Cart Is Empty 😊</h1>
    }
   </div>

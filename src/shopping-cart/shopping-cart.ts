@@ -10,11 +10,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './shopping-cart.css'
 })
 export class ShoppingCart {
+ 
 
-    p:(Iproduct)[]= [];
-
-    constructor(private _:Cart){
-      this.p = this._.added_products;
+    constructor(public _:Cart){
+       
     }
 
     del(x:string):void{

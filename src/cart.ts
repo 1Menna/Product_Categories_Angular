@@ -17,6 +17,7 @@ export class Cart {
    }
 
    delete(x:string){
+    console.log(this.added_products)
      this.added_products = this.added_products.filter(p => p.title !== x )
      console.log(this.added_products)
      this.count-=1;
