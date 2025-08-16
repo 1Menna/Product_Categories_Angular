@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: "games", component: Games, title: "games" },
   { path: "fashion", component: Fashion, title: "fashion" },
   // ===========================================================
-  { path: ":category/:p_id", component: ProductDetails , data: { renderMode: 'server'}},
+  { path: ":category/:p_id", component: ProductDetails },
   // ===========================================================
   { path: "contact", component: Contact, title: "contact" },
   { path: "", redirectTo: "electronics", pathMatch: "full" }
