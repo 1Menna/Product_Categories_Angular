@@ -22,9 +22,8 @@
         Category: <span class="fw-medium">{{ product.category }}</span>
       </p>
       
-      <button class="btn btn-warning btn-lg px-4 align-self-start">
-        <i class="bi bi-bag"></i> Add to Cart
-      </button>
+      <a class="btn btn-warning btn-lg px-4 align-self-start" (click)="add(product.id,product.category)">Add to cart</a>
+      
     </div>
   </div>
 </div>

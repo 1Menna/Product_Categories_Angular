@@ -6,6 +6,7 @@ import { beauty_products } from '../beauty/beauty';
 import { electronics_products } from '../electronics/electronics';
 import { fashion_products } from '../fashion/fashion';
 import { games_products } from '../games/games';
+import { Cart } from '../cart';
 // ======================================================
 @Component({
   selector: 'app-product-details',
@@ -14,7 +15,7 @@ import { games_products } from '../games/games';
   styleUrl: './product-details.css'
 })
 export class ProductDetails implements OnInit{
-    constructor(private _ActivatedRoute:ActivatedRoute){
+    constructor(private _ActivatedRoute:ActivatedRoute, public _Cart:Cart){
     }
 
     product_id! :string|null;
@@ -60,5 +61,27 @@ export class ProductDetails implements OnInit{
     this.product = list.find(p => p.id === Number(id)) || null;
     console.log("Selected product:", this.product);
   }  
+
+  // ================== for add to cart btn =====================
+  add(id:number,category:string):void{
+      switch (category){
+        case "electronics":
+          this._Cart.add_cart(electronics_products[id-1]);
+          break;
+        case "beauty":
+          this._Cart.add_cart(beauty_products[id-1]);
+          break;
+        case "appliances":
+          this._Cart.add_cart(appliances_products[id-1]);
+          break;
+        case "games":
+          this._Cart.add_cart(games_products[id-1]);
+          break;
+        case "fashion":
+          this._Cart.add_cart(fashion_products[id-1]);
+          break;
+      }
+      
+  }
 
 }

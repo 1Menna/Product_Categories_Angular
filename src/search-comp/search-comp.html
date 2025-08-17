@@ -10,7 +10,7 @@
           <p class="card-text">{{product.price}} EGP</p>
           <div class="d-flex justify-content-between">
                 <a class="btn btn-success" [routerLink]="['/'+product.category,product.id]">View Detailes</a>
-                <a class="btn btn-warning" >Add to cart</a>
+                <a class="btn btn-warning" (click)="add(product.id,product.category)">Add to cart</a>
           </div>
         </div>
       </div>
