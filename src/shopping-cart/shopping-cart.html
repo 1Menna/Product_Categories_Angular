@@ -18,17 +18,24 @@
       </div>
     </div>
   }@empty {
-    <h1 class="text-center"> Cart Is Empty 😊</h1>
+    <h1 class="d-flex justify-content-center align-items-center " style="height: 70vh;">
+      Cart Is Empty 😊
+    </h1>
+
   }
   @if(_.total_price!=0){
-      <h1 class="text-center">Total Price {{_.total_price}} EGP</h1>
-      <br><br><br>
-      <button class="btn btn-warning"> Go To CheckOut</button>
-      <br>
+    <div class="text-center my-5">
+        <h2 class="fw-semibold mb-4">
+          Total Price: <span class="text-success">{{_.total_price}} EGP</span>
+        </h2>
+
+        <button class="btn btn-warning px-4 py-2 rounded-pill shadow-sm" routerLink="/checkout">
+          Go To Checkout
+        </button>
+    </div>
+
   } 
   
   </div>
 </div>
-
-
 
