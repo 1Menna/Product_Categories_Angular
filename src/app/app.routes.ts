@@ -7,6 +7,7 @@ import { Contact } from '../contact/contact';
 import { Fashion } from '../fashion/fashion';
 import { ProductDetails } from '../product-details/product-details';
 import { ShoppingCart } from '../shopping-cart/shopping-cart';
+import { SearchComp } from '../search-comp/search-comp';
 
 export const routes: Routes = [
   { path: "electronics", component: Electronics, title: "electronics" },
@@ -19,6 +20,7 @@ export const routes: Routes = [
   // ===========================================================
   { path: "contact", component: Contact, title: "contact" },
   { path: "cart", component: ShoppingCart, title: "cart" },
+  { path: "search", component: SearchComp, title: "search" },
   { path: "", redirectTo: "electronics", pathMatch: "full" }
     // ===========================================================
 

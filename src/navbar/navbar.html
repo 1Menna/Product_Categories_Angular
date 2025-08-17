@@ -5,9 +5,15 @@
     <a class="navbar-brand text-light">OFFER</a>
 
     <!-- Center: Search -->
-    <form class="search-box my-2 my-lg-0 mx-lg-auto" role="search">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    <form (ngSubmit)="onSearch()" class="search-box my-2 my-lg-0 mx-lg-auto" role="search">
+      <div class="input-group">
+        <input [(ngModel)]="searchTerm" name="search" type="search" class="form-control" placeholder="Search" aria-label="Search">
+        <button class="btn btn-light" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
     </form>
+
 
     <!-- Right: Links -->
     <ul class="navbar-nav">
