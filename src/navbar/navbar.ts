@@ -33,22 +33,32 @@ export class Navbar {
 
     searchTerm:string = "";
 
+    
     onSearch():void{
-       if (!this.searchTerm.trim()) {return};
+       
+       if (!this.searchTerm.trim()) {
+       this._Router.navigate(['/']);
+       return;
+      }
 
        const matches = this.allItems.filter(item =>
           item.title.toLowerCase().includes(this.searchTerm.toLowerCase())
        );
 
        if (matches.length > 0) {
-        this._SearchServ.results = matches;
-        this._Router.navigate(['/search']);
+            this._SearchServ.results = matches;
        }else {
-        alert("No results found!");
+            alert("No results found!");
        }
 
-    }
 
+        if (this._Router.url !== '/search') {
+          this._Router.navigate(['/search']);
+        } 
+ 
+
+    }
+ 
 
     
 

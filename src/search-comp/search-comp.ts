@@ -2,6 +2,7 @@ import { Iproduct } from './../iproduct';
 import { Component, OnInit } from '@angular/core';
 import { SearchServ } from '../search-serv';
 import { Cart } from '../cart';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-comp',
@@ -9,17 +10,20 @@ import { Cart } from '../cart';
   templateUrl: './search-comp.html',
   styleUrl: './search-comp.css'
 })
-export class SearchComp implements OnInit {
+export class SearchComp implements OnInit{
 
-    results!:Iproduct[];
 
-    constructor(public _searchServ:SearchServ , public _Cart:Cart){
+    constructor(public _searchServ:SearchServ , public _Router:Router ){
 
     }
 
     ngOnInit() {
-      this.results = this._searchServ.results;
+    // if results is empty => navigate home
+    if (!this._searchServ.results || this._searchServ.results.length === 0) {
+      this._Router.navigate(['/']);
     }
+  }
+     
 
      
 }
