@@ -8,16 +8,24 @@
         <div class="card-body">
           <h5 class="card-title">{{product.title}}</h5>
           <p class="card-text">{{product.price}} EGP</p>
+          <p class="card-text">{{product.quantity}} item</p>
           <div class="d-flex justify-content-between">
                 <a class="btn btn-success" [routerLink]="['/'+product.category,product.id]">View Detailes</a>
-                <a class="btn btn-danger" (click)="del(product.title)">Delete</a>
+                <a class="btn btn-danger" (click)="del(product.title,product.price,product.quantity!)">Delete</a>
           </div>
       </div>
     </div>
     </div>
   }@empty {
     <h1 class="text-center"> Cart Is Empty 😊</h1>
-   }
+  }
+  @if(_.total_price!=0){
+      <h1 class="text-center">Total Price {{_.total_price}} EGP</h1>
+      <br><br><br>
+      <button class="btn btn-warning"> Go To CheckOut</button>
+      <br>
+  } 
+  
   </div>
 </div>
 

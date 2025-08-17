@@ -12,6 +12,8 @@ import { fashion_products } from '../fashion/fashion';
 import { games_products } from '../games/games';
 import { FormsModule} from '@angular/forms';
 //==================================================
+import Swal from 'sweetalert2';
+//==================================================
 @Component({
   selector: 'app-navbar',
   imports: [RouterLink,RouterLinkActive,FormsModule],
@@ -37,8 +39,12 @@ export class Navbar {
     onSearch():void{
        
        if (!this.searchTerm.trim()) {
-       this._Router.navigate(['/']);
-       return;
+          Swal.fire({
+            icon: 'info',
+            text: `Search Input Is Empty`,
+            showConfirmButton: false,
+            timer: 3900
+          });
       }
 
        const matches = this.allItems.filter(item =>

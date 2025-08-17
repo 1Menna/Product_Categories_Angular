@@ -4,4 +4,5 @@ export interface Iproduct {
     price:number,
     category:string
     img:string
+    quantity?: number;
 }

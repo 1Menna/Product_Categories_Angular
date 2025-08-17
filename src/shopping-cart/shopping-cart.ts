@@ -16,7 +16,7 @@ export class ShoppingCart {
        
     }
 
-    del(x:string):void{
-        this._.delete(x);
+    del(x:string,y:number,z:number):void{
+        this._.delete(x,y,z);
     }
 }
