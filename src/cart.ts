@@ -12,8 +12,14 @@ export class Cart {
    ];
 
    add_cart(obj:Iproduct):void{
-    this.added_products.push(obj);
-    this.count+=1;
+      const exists = this.added_products.some(p => p.title === obj.title); // check by id
+
+      if (!exists) {
+        this.added_products.push(obj);
+        this.count += 1;
+      } else {
+        alert("This product is already in your cart!");
+      }
    }
 
    delete(x:string){
