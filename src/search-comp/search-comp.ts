@@ -2,11 +2,12 @@ import { Iproduct } from './../iproduct';
 import { Component, OnInit } from '@angular/core';
 import { SearchServ } from '../search-serv';
 import { Cart } from '../cart';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+ 
 
 @Component({
   selector: 'app-search-comp',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './search-comp.html',
   styleUrl: './search-comp.css'
 })
