@@ -2,19 +2,20 @@
   <div class="row">
     @for(product of _.added_products; track product.id)
     {    
-    <div class="col-12 col-md-6 col-lg-4 mb-4 ">
-      <div class="card" style="width: 21rem;">
-        <img [src]="product.img" class="card-img-top h_w" alt="...">
-        <div class="card-body">
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card product-card h-100">
+        <img [src]="product.img" class="card-img-top product-img" alt="...">
+        <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{product.title}}</h5>
           <p class="card-text">{{product.price}} EGP</p>
-          <p class="card-text">{{product.quantity}} item</p>
-          <div class="d-flex justify-content-between">
-                <a class="btn btn-success" [routerLink]="['/'+product.category,product.id]">View Detailes</a>
-                <a class="btn btn-danger" (click)="del(product.title,product.price,product.quantity!)">Delete</a>
+          <h4 class="card-text text-center">{{product.quantity}} item</h4>
+
+          <div class="mt-auto d-flex justify-content-between">
+            <a class="btn btn-success" [routerLink]="['/'+product.category,product.id]">View Details</a>
+            <a class="btn btn-danger" (click)="del(product.title,product.price,product.quantity!)">Delete</a>
           </div>
+        </div>
       </div>
-    </div>
     </div>
   }@empty {
     <h1 class="text-center"> Cart Is Empty 😊</h1>
